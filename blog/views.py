@@ -66,7 +66,7 @@ class EditProfileView(LoginRequiredMixin,View):
         form = ProfileEditForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
             form.save()  
-            return redirect('/users:profile')  
+            return redirect('/')  
         
         form=ProfileEditForm(instance=request.user)
         return render(request, 'user/edit.html', context={"form":form})

@@ -34,11 +34,11 @@ class ProfileEditForm(forms.ModelForm):
     first_name = forms.CharField(widget=forms.TextInput({"class": "form-control", "placeholder": "First Name"}))
     last_name = forms.CharField(widget=forms.TextInput({"class": "form-control", "placeholder": "Last Name"}))
 
-    password = forms.CharField(widget=forms.PasswordInput({"class": "form-control", "placeholder": "Password"}))
-    confirm_password = forms.CharField(widget=forms.PasswordInput({"class": "form-control", "placeholder": "Confirm Password"}))
+    # password = forms.CharField(widget=forms.PasswordInput({"class": "form-control", "placeholder": "Password"}))
+    # confirm_password = forms.CharField(widget=forms.PasswordInput({"class": "form-control", "placeholder": "Confirm Password"}))
     class Meta:
         model=User
-        fields=('username', 'phone_number', 'first_name', 'last_name', 'password', 'confirm_password')
+        fields=('username', 'phone_number', 'first_name', 'last_name')
   
   
   
